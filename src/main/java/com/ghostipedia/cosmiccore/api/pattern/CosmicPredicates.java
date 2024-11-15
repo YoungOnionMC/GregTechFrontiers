@@ -39,7 +39,7 @@ import java.util.function.Supplier;
 
 import static com.ghostipedia.cosmiccore.api.data.CosmicCustomTags.STAR_LADDER_BLOCKS;
 import static com.gregtechceu.gtceu.api.pattern.Predicates.blocks;
-import static com.gregtechceu.gtceu.common.data.GCyMBlocks.CASING_ATOMIC;
+import static com.gregtechceu.gtceu.common.data.GCYMBlocks.CASING_ATOMIC;
 import static com.gregtechceu.gtceu.common.machine.multiblock.electric.PowerSubstationMachine.PMC_BATTERY_HEADER;
 
 public class CosmicPredicates {

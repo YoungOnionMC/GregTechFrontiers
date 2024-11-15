@@ -1,5 +1,6 @@
 package com.ghostipedia.cosmiccore.common.machine.multiblock.steam;
 
+import com.ghostipedia.cosmiccore.api.machine.part.SteamFluidHatchPartMachine;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.capability.recipe.EURecipeCapability;
 import com.gregtechceu.gtceu.api.capability.recipe.FluidRecipeCapability;
@@ -18,6 +19,7 @@ import com.gregtechceu.gtceu.api.recipe.logic.OCParams;
 import com.gregtechceu.gtceu.api.recipe.logic.OCResult;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.gregtechceu.gtceu.common.data.GTRecipeModifiers;
+import com.gregtechceu.gtceu.common.machine.multiblock.part.SteamHatchPartMachine;
 import com.gregtechceu.gtceu.config.ConfigHolder;
 import com.lowdragmc.lowdraglib.gui.modular.ModularUI;
 import com.lowdragmc.lowdraglib.gui.texture.IGuiTexture;
@@ -56,17 +58,14 @@ public class WeakSteamParallelMultiBlockMachine extends WorkableMultiblockMachin
             if (handler instanceof NotifiableFluidTank tank) {
                 if (tank.getFluidInTank(0).getFluid() == GTMaterials.Steam.getFluid()) {
                     itr.remove();
-                    if (!capabilitiesProxy.contains(IO.IN, EURecipeCapability.CAP)) {
+                    if (((NotifiableFluidTank) handler).getMachine() instanceof SteamHatchPartMachine) {
                         capabilitiesProxy.put(IO.IN, EURecipeCapability.CAP, new ArrayList<>());
                     }
                     capabilitiesProxy.get(IO.IN, EURecipeCapability.CAP)
                             .add(new SteamEnergyRecipeHandler(tank, CONVERSION_RATE));
                     return;
                 }
-                else if (!capabilitiesProxy.contains(IO.IN, EURecipeCapability.CAP)) {
-                    capabilitiesProxy.put(IO.IN, EURecipeCapability.CAP, new ArrayList<>());
-                }
-                return;
+                continue;
             }
         }
     }

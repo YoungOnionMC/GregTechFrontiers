@@ -71,7 +71,7 @@ import static com.gregtechceu.gtceu.api.GTValues.*;
 import static com.gregtechceu.gtceu.api.GTValues.UV;
 import static com.gregtechceu.gtceu.api.pattern.Predicates.*;
 import static com.gregtechceu.gtceu.api.pattern.util.RelativeDirection.*;
-import static com.gregtechceu.gtceu.common.data.GCyMBlocks.*;
+import static com.gregtechceu.gtceu.common.data.GCYMBlocks.*;
 import static com.gregtechceu.gtceu.common.data.GTBlocks.*;
 import static com.gregtechceu.gtceu.common.data.GTMachines.*;
 
@@ -84,18 +84,19 @@ public class CosmicMachines {
 
     public static GTRecipe copyOutputs(GTRecipe recipe, ContentModifier modifier) {
 
-        return new GTRecipe(recipe.recipeType, recipe.getId(),
+        return new GTRecipe(recipe.recipeType, recipe.id,
                 recipe.inputs,
                 recipe.copyContents(recipe.outputs, modifier),
                 recipe.tickInputs,
                 recipe.copyContents(recipe.tickOutputs, modifier),
-                new HashMap<>(recipe.inputChanceLogics), new HashMap<>(recipe.outputChanceLogics),
-                new HashMap<>(recipe.tickInputChanceLogics), new HashMap<>(recipe.tickOutputChanceLogics),
-                new ArrayList<>(recipe.conditions),
-                new ArrayList<>(recipe.ingredientActions),
+                recipe.inputChanceLogics, recipe.outputChanceLogics,
+                recipe.tickInputChanceLogics,recipe.tickOutputChanceLogics,
+                recipe.conditions,
+                recipe.ingredientActions,
                 recipe.data,
                 recipe.duration,
-                recipe.isFuel);
+                recipe.isFuel,
+                recipe.recipeCategory);
 
 
     }
@@ -391,7 +392,7 @@ public static final MultiblockMachineDefinition STEAM_MIXER = GTRegistration.REG
             .rotationState(RotationState.NON_Y_AXIS)
             .recipeType(CosmicRecipeTypes.CHROMATIC_FLOTATION_PLANT)
             .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK))
-            .appearanceBlock(GCyMBlocks.CASING_WATERTIGHT)
+            .appearanceBlock(GCYMBlocks.CASING_WATERTIGHT)
             .generator(true)
             .pattern(definition -> FactoryBlockPattern.start()
                     .aisle("AAAAAAA", "AAAAAAA", "AAAAAAA", "AAAAAAA", "AAAAAAA")

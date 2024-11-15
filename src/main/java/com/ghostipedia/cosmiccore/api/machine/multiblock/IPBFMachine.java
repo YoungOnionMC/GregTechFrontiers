@@ -11,7 +11,6 @@ import com.gregtechceu.gtceu.api.machine.feature.multiblock.IDisplayUIMachine;
 import com.gregtechceu.gtceu.api.machine.multiblock.WorkableMultiblockMachine;
 import com.gregtechceu.gtceu.api.machine.steam.SteamEnergyRecipeHandler;
 import com.gregtechceu.gtceu.api.recipe.GTRecipe;
-import com.gregtechceu.gtceu.api.recipe.RecipeHelper;
 import com.gregtechceu.gtceu.api.recipe.logic.OCParams;
 import com.gregtechceu.gtceu.api.recipe.logic.OCResult;
 import com.gregtechceu.gtceu.common.data.GTRecipeModifiers;
@@ -39,7 +38,6 @@ import java.util.List;
 
 public class IPBFMachine extends WorkableMultiblockMachine implements IDisplayUIMachine {
     public static final int MAX_PARALLELS = 8;
-    private static final double CONVERSION_RATE = 0.5D;
     public IPBFMachine(IMachineBlockEntity holder, Object... args) {
         super(holder, args);
     }
@@ -109,9 +107,8 @@ public class IPBFMachine extends WorkableMultiblockMachine implements IDisplayUI
     public static GTRecipe recipeModifier(MetaMachine machine, @NotNull GTRecipe recipe, @NotNull OCParams params,
                                           @NotNull OCResult result) {
         int duration = recipe.duration;
-        var eut = RecipeHelper.getInputEUt(recipe);
         var parallelRecipe = GTRecipeModifiers.accurateParallel(machine, recipe, MAX_PARALLELS, false);
-        result.init(eut, (int) (duration * 1.5), parallelRecipe.getSecond(),
+        result.init(0,(int) (duration * 1.5), parallelRecipe.getSecond(),
                 params.getOcAmount());
         return recipe;
     }

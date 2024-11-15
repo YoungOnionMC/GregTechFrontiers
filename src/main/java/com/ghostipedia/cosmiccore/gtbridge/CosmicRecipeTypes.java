@@ -5,6 +5,7 @@ import com.ghostipedia.cosmiccore.api.capability.recipe.SoulRecipeCapability;
 import com.gregtechceu.gtceu.api.capability.recipe.IO;
 import com.gregtechceu.gtceu.api.gui.GuiTextures;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
+import com.gregtechceu.gtceu.api.recipe.category.GTRecipeCategory;
 import com.gregtechceu.gtceu.api.recipe.content.Content;
 import com.gregtechceu.gtceu.common.data.GTRecipeTypes;
 import com.gregtechceu.gtceu.common.data.GTSoundEntries;
@@ -127,12 +128,15 @@ public class CosmicRecipeTypes {
     public static void init() {
         CHEMICAL_RECIPES.onRecipeBuild((builder, provider) -> {
             LARGE_CHEMICAL_RECIPES.copyFrom(builder)
+                    .category(GTRecipeCategory.of(LARGE_CHEMICAL_RECIPES))
                     .save(provider);
             VOMAHINE_INDUSTRIAL_CHEMVAT.copyFrom(builder)
+                    .category(GTRecipeCategory.of(VOMAHINE_INDUSTRIAL_CHEMVAT))
                     .save(provider);
         });
         LARGE_CHEMICAL_RECIPES.onRecipeBuild((builder, provider) -> {
             VOMAHINE_INDUSTRIAL_CHEMVAT.copyFrom(builder)
+                    .category(GTRecipeCategory.of(VOMAHINE_INDUSTRIAL_CHEMVAT))
                     .save(provider);
         });
 

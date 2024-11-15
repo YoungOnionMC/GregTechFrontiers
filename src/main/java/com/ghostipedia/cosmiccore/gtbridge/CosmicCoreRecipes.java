@@ -64,6 +64,7 @@ public class CosmicCoreRecipes {
                 .save(provider);
         INDUSTRIAL_PRIMITIVE_BLAST_FURNACE_RECIPES.recipeBuilder("steel_from_charcoal_dust").inputItems(ingot, Iron)
                 .inputItems(dust, Charcoal, 2).outputItems(ingot, Steel).outputItems(dustTiny, DarkAsh, 2)
+                .inputFluids(Creosote.getFluid(250))
                 .duration(1800).save(provider);
         INDUSTRIAL_PRIMITIVE_BLAST_FURNACE_RECIPES.recipeBuilder("steel_from_coke_gem").inputItems(ingot, Iron)
                 .inputItems(gem, Coke).outputItems(ingot, Steel).chancedOutput(dust, Ash, "1/9", 0).duration((int)(1500 * 0.75f)).inputFluids(Creosote.getFluid(250))

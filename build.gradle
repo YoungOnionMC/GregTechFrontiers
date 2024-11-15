@@ -70,6 +70,10 @@ repositories {
         }
     }
     maven {
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/releases/"
+    }
+    maven {
         name 'FirstDarkDev'
         url "https://maven.firstdarkdev.xyz/snapshots/"
     }
@@ -134,8 +138,9 @@ dependencies {
         it.officialMojangMappings { nameSyntheticMembers = false }
     }
 
-    modCompileOnly("mezz.jei:jei-${project.minecraft_version}-forge-api:${project.jei_version}") { transitive = false }
     modCompileOnly("mezz.jei:jei-${project.minecraft_version}-common-api:${project.jei_version}") { transitive = false }
+    modCompileOnly("mezz.jei:jei-${project.minecraft_version}-forge-api:${project.jei_version}") { transitive = false }
+    modCompileOnly("mezz.jei:jei-${project.minecraft_version}-forge:${project.jei_version}") { transitive = false }
 
     modImplementation("com.gregtechceu.gtceu:gtceu-${project.minecraft_version}:${project.gtceu_version}:slim") { transitive = false }
     modImplementation("com.lowdragmc.ldlib:ldlib-forge-${project.minecraft_version}:${project.ldlib_version}") { transitive = false }
@@ -149,7 +154,7 @@ dependencies {
     modImplementation("com.teamresourceful.resourcefulconfig:resourcefulconfig-forge-${project.minecraft_version}:${project.resourcefulconfig_version}")
     modImplementation("earth.terrarium.botarium:botarium-forge-${project.minecraft_version}:${project.botarium_version}")
     modImplementation("earth.terrarium.adastra:ad_astra-forge-${project.minecraft_version}:${ad_astra_version}") {transitive false} // issue with create mod so not transitive
-
+    modImplementation ("dev.emi:emi-forge:${emi_version}")
     // Blood Magic //TODO: Find real repo url
     //modImplementation("com.wayoftime.bloodmagic:BloodMagic:${project.minecraft_version}-${project.blood_magic_version}")
     // modCompileOnly("curse.maven:blood-magic-224791:4779713") // API
