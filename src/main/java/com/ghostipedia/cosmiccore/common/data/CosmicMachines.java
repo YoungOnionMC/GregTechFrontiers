@@ -224,7 +224,7 @@ public static final MultiblockMachineDefinition STEAM_MIXER = GTRegistration.REG
             .multiblock("industrial_primitive_blast_furnace", IPBFMachine::new)
             .rotationState(RotationState.ALL)
             .recipeType(CosmicRecipeTypes.INDUSTRIAL_PRIMITIVE_BLAST_FURNACE_RECIPES)
-            .recipeModifier(SteamParallelMultiblockMachine::recipeModifier, true)
+            .recipeModifier(IPBFMachine::recipeModifier, true)
             .appearanceBlock(CASING_PRIMITIVE_BRICKS)
             .pattern(definition -> FactoryBlockPattern.start()
                     .aisle("QQQ", "XXX", "XXX", "XXX", "XXX")
