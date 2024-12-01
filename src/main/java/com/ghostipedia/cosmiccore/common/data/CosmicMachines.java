@@ -660,6 +660,7 @@ public static final MultiblockMachineDefinition STEAM_MIXER = GTRegistration.REG
             .rotationState(RotationState.ALL)
             .abilities(PartAbility.IMPORT_FLUIDS)
             .overlaySteamHullRenderer("fluid_hatch.import")
+            .tooltips(Component.translatable("gtceu.machine.steam_fluid_hatch_notice"))
             .langValue("Fluid Input Hatch (Steam)")
             .register();
     public static final MachineDefinition STEAM_EXPORT_HATCH = GTRegistration.REGISTRATE

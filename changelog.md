@@ -1,6 +1,6 @@
-# Cosmic Core 0.3.8
-* Updated to GTCEU 1.4.6
+# Cosmic Core 0.4.1
+* Updated to GTCEU 1.5.4
 * Fix Steam Machines trying to use fluid hatches for fuel vs the Steam Input Hatch.
-* Misc Fixes
+* Fix IPBF not running.
 
-# DO NOT MANUALLY UPDATE COSMIC CORE FOR FRONTIERS 0.5.2 **I WILL NOT WORK**
+# DO NOT MANUALLY UPDATE COSMIC CORE FOR FRONTIERS **I WILL NOT WORK**
