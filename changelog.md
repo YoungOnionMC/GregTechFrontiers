@@ -1,5 +1,6 @@
 # Cosmic Core 0.4.2
-* Updated to GTCEU 1.5.4
-* Fixed Yet Another Steam Machine.
+* Removes EuP2P Functionality at a packwide level
+* fixes a few armor charge rate problems
+
 
 # DO NOT MANUALLY UPDATE COSMIC CORE FOR FRONTIERS **I WILL NOT WORK**
