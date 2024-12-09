@@ -8,6 +8,7 @@
         "AdAstraSpaceSuitItemMixin",
         "DivingHelmetItemMixin",
         "PlayerBreathingMixin",
+        "MAE2GTIntegrationMixin",
         "accessor.LivingEntityAccessor",
         "accessor.LootTableAccessor",
         "client.CosmicCoreRemainingAirOverlayMixin"
