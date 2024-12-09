@@ -251,7 +251,7 @@ public static final MultiblockMachineDefinition STEAM_MIXER = GTRegistration.REG
             .multiblock("high_pressure_assembler", WeakSteamParallelMultiBlockMachine::new)
             .rotationState(RotationState.ALL)
             .recipeType(GTRecipeTypes.ASSEMBLER_RECIPES)
-            .recipeModifier(SteamParallelMultiblockMachine::recipeModifier, true)
+            .recipeModifier(WeakSteamParallelMultiBlockMachine::recipeModifier, true)
             .appearanceBlock(STEEL_PLATED_BRONZE)
             .pattern(definition -> FactoryBlockPattern.start()
                     .aisle("AAAAA", "BBBBB", "BBBBB")
