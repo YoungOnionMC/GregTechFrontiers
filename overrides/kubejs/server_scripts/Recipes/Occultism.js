@@ -50,8 +50,6 @@ ServerEvents.tags('item', event => {
   event.remove('forge:dusts/silver', 'occultism:silver_dust')
   event.remove('forge:dusts/obsidian', 'occultism:obsidian_dust')
   event.remove('forge:dusts/end_stone', 'occultism:crushed_end_stone')
-  event.remove('forge:raw_materials/iesnium', 'gtceu:raw_iesnium')
-  event.add('c:hidden_from_recipe_viewers', 'gtceu:raw_iesnium')
 })
 
 ServerEvents.recipes(event => {
@@ -59,6 +57,7 @@ ServerEvents.recipes(event => {
   event.remove({ type: 'occultism:miner' })
   event.remove({ id: 'occultism:spirit_fire/spirit_attuned_gem' })
   event.remove({ id: 'occultism:crafting/chalk_red_impure' })
+  event.remove({ id: 'occultism:crafting/chalk_purple_impure' })
   // event.recipes.occultism.spirit_trade('minecraft:rotten_flesh', 'minecraft:bone')
   event.recipes.occultism.spirit_fire('occultism:spirit_attuned_gem', 'gtceu:certus_quartz_gem')
   // event.recipes.occultism.crushing(
@@ -100,7 +99,7 @@ ServerEvents.recipes(event => {
     ' S '
   ], {
     P: 'gtceu:iesnium_plate',
-    I: 'gtceu:iesnium_ingot',
+    I: 'occultism:iesnium_ingot',
     S: '#forge:rods/wooden',
     F: '#forge:tools/files',
     H: '#forge:tools/hammers'
@@ -148,20 +147,20 @@ ServerEvents.recipes(event => {
   // event.remove({ id: '' })
 
 
-  event.recipes.gtceu.primitive_blast_furnace('chalk_purify')
-    .itemInputs('occultism:chalk_white_impure')
-    .itemOutputs('occultism:chalk_white')
-    .duration(3000)
-  event.recipes.gtceu.primitive_blast_furnace('chalk_bake_red')
-    .itemInputs(['occultism:chalk_white_impure', '3x gtceu:raw_pyrope', '3x occultism:afrit_essence'])
-    .itemOutputs('occultism:chalk_red_impure')
-    .duration(1500)
+  // event.recipes.gtceu.primitive_blast_furnace('chalk_purify')
+  //   .itemInputs('occultism:chalk_white_impure', '#minecraft:coals')
+  //   .itemOutputs('occultism:chalk_white')
+  //   .duration(3000)
+  // event.recipes.gtceu.primitive_blast_furnace('chalk_bake_red')
+  //   .itemInputs(['occultism:chalk_white_impure', '3x gtceu:raw_pyrope', '3x occultism:afrit_essence'])
+  //   .itemOutputs('occultism:chalk_red_impure')
+  //   .duration(1500)
   event.remove({ id: 'occultism:crafting/chalk_gold_impure' })
-  event.recipes.gtceu.primitive_blast_furnace('yellow_chalk_melding')
-    .itemInputs(['occultism:chalk_white_impure', 'gtceu:ancient_debris_dust', '2x gtceu:gold_sulfide_amalgam_dust'])
-    .itemOutputs('occultism:chalk_gold_impure')
-    .duration(800)
-    //IPBF VERSIONS
+  // event.recipes.gtceu.primitive_blast_furnace('yellow_chalk_melding')
+  //   .itemInputs(['occultism:chalk_white_impure', 'gtceu:ancient_debris_dust', '2x gtceu:gold_sulfide_amalgam_dust'])
+  //   .itemOutputs('occultism:chalk_gold_impure')
+  //   .duration(800)
+  //IPBF VERSIONS
   event.recipes.gtceu.industrial_primitive_blast_furnace('chalk_purify_ipbf')
     .itemInputs('occultism:chalk_white_impure')
     .inputFluids('gtceu:creosote 1000')
@@ -176,6 +175,11 @@ ServerEvents.recipes(event => {
     .itemInputs(['occultism:chalk_white_impure', 'gtceu:ancient_debris_dust', '2x gtceu:gold_sulfide_amalgam_dust'])
     .inputFluids('gtceu:creosote 1000')
     .itemOutputs('occultism:chalk_gold_impure')
+    .duration(800)
+  event.recipes.gtceu.industrial_primitive_blast_furnace('purple_chalk_melding_ipbf')
+    .itemInputs(['occultism:chalk_white_impure', '8x gtceu:soulresin_ingot', '4x gtceu:cinderwax_ingot'])
+    .inputFluids('gtceu:creosote 1000')
+    .itemOutputs('occultism:chalk_purple_impure')
     .duration(800)
   event.recipes.occultism.miner(
     Item.of('cosmiccore:rune_slate_arklys').withChance(50),

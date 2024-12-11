@@ -78,8 +78,8 @@ ServerEvents.recipes(event => {
         //GTCEU
         'rubber', //index 23
         //architect pallets
-        'twisted', //index 25
-        //BiomesWeve Gone Index 26-49
+        'twisted', //index 24
+        //BiomesWeve Gone Index 25-49
         'aspen',
         'baobab',
         'blue_enchanted',
@@ -103,7 +103,9 @@ ServerEvents.recipes(event => {
         'white_mangrove',
         'willow',
         'witch_hazel',
-        'zelkova'
+        'zelkova',
+        //Index 49 Botania
+        'livingwood'
 
     ]
     let mcWood = [
@@ -316,8 +318,10 @@ ServerEvents.recipes(event => {
             modID = 'gtceu'
         } else if (index === 24) {
             modID = 'architects_palette'
-        } else if (index >= 25) {
+        } else if (index >= 25 && index <= 48 ) {
             modID = 'biomeswevegone'
+        } else if ( index === 49 ) {
+            modID = 'botania'
         }
 
         if (Item.exists(`${modID}:${woodType}_log`)) {
@@ -614,6 +618,7 @@ ServerEvents.recipes(event => {
         if (Item.exists(`${modID}:${woodType}_boat`)) {
             event.recipes.gtceu.assembler(`${modID}:${woodType}_planks`)
                 .itemInputs(`5x ${modID}:${woodType}_planks`)
+                .circuit(15)
                 .itemOutputs(`4x ${modID}:${woodType}_boat`)
                 .duration(100)
                 .EUt(4);

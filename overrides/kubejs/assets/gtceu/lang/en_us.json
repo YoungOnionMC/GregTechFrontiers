@@ -395,7 +395,7 @@
   "material.gtceu.diluted_nitric_acid": "Diluted Nitric Acid",
   "material.gtceu.potassium_fluoride": "Potassium Fluoride",
 
-  "material.gtceu.fused_naquadah_emulsion": "Fused Naquadah Emulsion",
+  "material.gtceu.fused_naquadah_emulsion": "Luminal Fused Naquadah",
   "material.gtceu.raw_naquahine": "Raw Naquahine",
   "material.gtceu.prisma_doped_raw_naquahine": "Prisma Doped Raw naquahine",
   "material.gtceu.inert_naquahine": "Inert Naquahine",
@@ -433,6 +433,7 @@
   "gtceu.fake_meteor_ritual": "Meteor Rituals",
   "block.gtceu.max_meteor_recipe_dummy": "§3Meteor Rituals",
   "block.gtceu.large_lithographic_processor": "§3Large Lithographic Processor",
+  "gtceu.industrial_primitive_blast_furnace": "Industrial Primitive Blast Furnace",
 
   "gtceu:cyanex_272": "Cyanex-272",
   "gtceu:tert_butanol": "Tert-butanol",

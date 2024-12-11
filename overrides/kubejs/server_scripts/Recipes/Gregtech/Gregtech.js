@@ -13,6 +13,8 @@ let yeet = (itemName) => {
 ServerEvents.tags('item', event => {
   event.add('forge:lenses/ruby', 'gtceu:redstone_lens')
   event.add('forge:lenses/red', 'gtceu:redstone_lens')
+  event.add('c:hidden_from_recipe_viewers', 'gtceu:lp_steam_bender')
+  event.add('c:hidden_from_recipe_viewers', 'gtceu:lp_steam_wiremill')
   event.remove('minecraft:planks', 'gtceu:treated_wood_planks')
 })
 
