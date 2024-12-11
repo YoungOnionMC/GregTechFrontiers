@@ -17,7 +17,7 @@
 				"You have a winding road ahead of you, make sure to visit the &aAether&r!"
 				"And remember, don't plug &bMV&r Power into &7LV&r machines unless you like things exploding!"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "466C20EACAEF3394"
 			shape: "hexagon"
 			size: 2.5d
@@ -235,7 +235,7 @@
 				""
 				"Ethersteel will be widely used in HV and EV, so I'd recommend setting up automation or batching large batches of it..."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "44372CC42BD4ABEF"
 			shape: "hexagon"
 			size: 2.0d
@@ -1601,9 +1601,9 @@
 				"{@pagebreak}"
 				"&lThe Virtues&r: Something I wish never to meet—the Sword of the Scriptures. Virtues enact the wills of the Scriptures while staying within the universe's allowed rules of causality. They are terrifying, and I've seen entire planets turned to rubble by them on the news. They are one entity armies hellbent on following orders. "
 			]
-			hide: true
 			hide_details_until_startable: true
 			hide_text_until_complete: true
+			hide_until_deps_visible: true
 			icon: "botania:gaia_head"
 			id: "192F5200CDB94397"
 			shape: "gear"

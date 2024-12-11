@@ -17,7 +17,7 @@
 				"1E72D62913EEB4EE"
 				"19B3D686A4E2FFC9"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "0E1DFCD7C9346A7C"
 			shape: "hexagon"
 			tasks: [{

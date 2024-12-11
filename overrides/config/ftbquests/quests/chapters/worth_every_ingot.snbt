@@ -13,7 +13,7 @@
 				"2AF737CA4D527559"
 				"0CE1B054263D0C44"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "635C885360A8A8A9"
 			size: 2.0d
 			subtitle: "holding onto pain..."
@@ -1444,8 +1444,8 @@
 				item: "gtceu:raw_crystal_chip_parts"
 				type: "item"
 			}]
-			x: -9.75d
-			y: -13.0d
+			x: -11.0d
+			y: -14.0d
 		}
 		{
 			dependencies: ["2706AEF23FE25353"]
@@ -1455,8 +1455,8 @@
 				item: "cosmiccore:dilumixal_naquadah_doped_silicon_boule"
 				type: "item"
 			}]
-			x: -8.5d
-			y: -13.0d
+			x: -9.5d
+			y: -14.0d
 		}
 		{
 			dependencies: ["457C8C834358A6E7"]

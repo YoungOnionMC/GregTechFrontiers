@@ -23,7 +23,7 @@
 				""
 				"blah blah, Ghostipedia is full of soup."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "1E72D62913EEB4EE"
 			shape: "hexagon"
 			size: 2.0d
@@ -557,117 +557,16 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["1E72D62913EEB4EE"]
-			description: [
-				"If you've been keen, you've been collecting exotic ender eyes throughout the world."
-				""
-				"&aUse them to unlock the end portal, and be prepared for a fight!&r"
-				"Yes, you need to kill the dragon."
-				""
-				""
-				"If you need help finding more eyes, refer to the &bnext pages&r."
-				"[Credit : Directly from the Curseforge Page of End Remastered]"
-				""
-				""
-				"{@pagebreak}"
-				""
-				"1. Old Eye - Found in Desert Pyramids"
-				""
-				"2. Nether Eye - Found in Nether Fortresses"
-				""
-				"3. Cold Eye - Found in Igloos"
-				""
-				"4. Rogue Eye - Found in Jungle Pyramids"
-				"{@pagebreak}"
-				""
-				"5. Black Eye - Found in Buried Chests"
-				""
-				"6. Magical Eye - Dropped by Evokers"
-				""
-				"7. Lost Eye - Found in Mineshafts"
-				""
-				"8. Corrupted Eye - Found in Pillager Outposts"
-				"{@pagebreak}"
-				""
-				"9. Wither Eye - Dropped by The Wither"
-				""
-				"10. Guardian Eye - Get it by Killing Elder Guardian"
-				""
-				"11. Witch Eye - Craft it using the witch pupil"
-				""
-				"12. Cursed Eye - Found in Bastions treasure chest"
-				"{@pagebreak}"
-				""
-				"13. Exotic Eye - Craft it using aquatic items"
-				""
-				"14. Evil Eye - Buy it from a master cleric"
-				""
-				"15. Undead Eye - Craft it using an Undead Soul"
-				""
-				"16. Cryptic Eye - Have a small chance to get it when enchanting"
-			]
-			icon: "minecraft:ender_dragon_spawn_egg"
-			id: "2F7CA5340B77F058"
-			shape: "hexagon"
-			subtitle: "Get to the End"
-			tasks: [
-				{
-					dimension: "minecraft:the_end"
-					id: "383C105ADEC74236"
-					type: "dimension"
-				}
-				{
-					entity: "minecraft:ender_dragon"
-					id: "62F812212025E6D8"
-					type: "kill"
-					value: 1L
-				}
-			]
-			x: -2.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["2F7CA5340B77F058"]
-			description: ["You can't process tungsten quite yet, but this vein is mentioned as it's the first location you can get tungsten."]
-			id: "6995E63851268FF9"
-			subtitle: "Your First Source of Tungsten"
-			tasks: [
-				{
-					id: "68D3873961FD8F01"
-					item: "gtceu:raw_scheelite"
-					type: "item"
-				}
-				{
-					id: "238A6738497E93E6"
-					item: "gtceu:raw_tungstate"
-					type: "item"
-				}
-				{
-					id: "05447A99908D704B"
-					item: "gtceu:raw_lithium"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 1.5d
-		}
-		{
-			dependencies: ["2F7CA5340B77F058"]
+			dependencies: ["45823A74FF2F334D"]
 			id: "75D695A6DC21520C"
-			tasks: [
-				{
-					id: "47A42C11D11285A1"
-					item: "gtceu:raw_uraninite"
-					type: "item"
-				}
-				{
-					id: "4BBE1C2874F44327"
-					item: "gtceu:raw_pitchblende"
-					type: "item"
-				}
-			]
-			x: -3.5d
-			y: 0.0d
+			subtitle: "Nuclear Soon:tm:"
+			tasks: [{
+				id: "47A42C11D11285A1"
+				item: "gtceu:raw_uraninite"
+				type: "item"
+			}]
+			x: 10.5d
+			y: -7.5d
 		}
 		{
 			dependencies: ["726331ACD701F2FD"]
@@ -686,8 +585,8 @@
 					type: "checkmark"
 				}
 			]
-			x: -5.5d
-			y: 0.5d
+			x: 10.0d
+			y: -10.0d
 		}
 		{
 			dependencies: [
@@ -736,8 +635,8 @@
 				item: "gtceu:uranium_235_dust"
 				type: "item"
 			}]
-			x: -6.5d
-			y: -0.5d
+			x: 11.0d
+			y: -11.0d
 		}
 		{
 			dependencies: ["43879AAA41015110"]
@@ -747,8 +646,8 @@
 				item: "gtceu:uranium_dust"
 				type: "item"
 			}]
-			x: -6.5d
-			y: 0.5d
+			x: 10.0d
+			y: -11.0d
 		}
 		{
 			dependencies: ["22693418B45740CB"]
@@ -904,22 +803,6 @@
 			}]
 			x: 4.5d
 			y: 6.5d
-		}
-		{
-			dependencies: [
-				"504D0A68967D9CEE"
-				"69C238710AC5E0F5"
-			]
-			icon: "createdeco:decal_radioactive"
-			id: "7E60BE0010F3512E"
-			subtitle: "NYI - 0.4.1+ Content"
-			tasks: [{
-				id: "65B303CCBB487DBE"
-				item: "ftbquests:barrier"
-				type: "item"
-			}]
-			x: -7.5d
-			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1287,8 +1170,8 @@
 				id: "7C15A93D65EA6CE4"
 				type: "checkmark"
 			}]
-			x: 10.5d
-			y: -7.5d
+			x: 12.0d
+			y: -9.0d
 		}
 		{
 			dependencies: ["1A6DAD732EC9541E"]
@@ -1861,8 +1744,8 @@
 					type: "checkmark"
 				}
 			]
-			x: -5.5d
-			y: -0.5d
+			x: 11.0d
+			y: -10.0d
 		}
 		{
 			dependencies: ["75D695A6DC21520C"]
@@ -1882,8 +1765,8 @@
 					type: "checkmark"
 				}
 			]
-			x: -4.5d
-			y: 0.0d
+			x: 10.5d
+			y: -9.0d
 		}
 	]
 	title: "Gloomper Chemistry [HV]"

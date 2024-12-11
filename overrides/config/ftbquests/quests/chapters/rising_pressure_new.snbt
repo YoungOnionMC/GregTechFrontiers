@@ -20,7 +20,7 @@
 				""
 				"Start by making &abronze&r, a mixture of tin and copper dust. Remember, you can make dust by using ingots and a Gregtech &eMortar&r!"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "30C980B828A48306"
 			rewards: [
 				{
@@ -2613,9 +2613,9 @@
 				""
 				"These headaches have gotten unbearably loud."
 			]
-			hide: true
 			hide_details_until_startable: true
 			hide_text_until_complete: true
+			hide_until_deps_visible: true
 			icon: "ars_nouveau:worn_notebook"
 			id: "70F95C537C54938A"
 			subtitle: "Story Entry 1 | Description Hidden Until Completed"
@@ -2627,6 +2627,37 @@
 			title: "To Question What's Here"
 			x: -13.5d
 			y: 9.0d
+		}
+		{
+			dependencies: ["30C980B828A48306"]
+			description: [
+				"Sticky Resin is gathered by cutting down rubber trees."
+				"You can fine them basically anywhere trees can spawn."
+			]
+			id: "732E5FCCE85F859A"
+			rewards: [{
+				count: 4
+				id: "76E0DB1563EB9ACB"
+				item: "cosmiccore:shard_of_perpetuity"
+				type: "item"
+			}]
+			shape: "gear"
+			subtitle: "How to find Rubber"
+			tasks: [
+				{
+					id: "7E447C8092ABA7C7"
+					item: "gtceu:rubber_sapling"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "644F2502849FAB1E"
+					item: { Count: 8, id: "gtceu:sticky_resin" }
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: -7.0d
 		}
 	]
 	title: "Rising Pressure - [Steam]"

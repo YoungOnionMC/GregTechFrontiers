@@ -10,7 +10,7 @@
 	quests: [
 		{
 			dependencies: ["44DE661BAA434766"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "52DAB014D2101F02"
 			shape: "hexagon"
 			size: 2.0d
@@ -691,8 +691,8 @@
 				"4DA37DF15D6955C2"
 				"52DAB014D2101F02"
 			]
-			hide: true
 			hide_dependency_lines: true
+			hide_until_deps_visible: true
 			id: "2275BD1700FF037F"
 			subtitle: "Have You Finished Platline?"
 			tasks: [{
@@ -708,8 +708,8 @@
 				"7C2579488595C534"
 				"52DAB014D2101F02"
 			]
-			hide: true
 			hide_dependency_lines: true
+			hide_until_deps_visible: true
 			id: "1C8200AE86247D44"
 			subtitle: "Have You Finished Platline?"
 			tasks: [{
@@ -946,8 +946,8 @@
 		}
 		{
 			dependencies: ["52DAB014D2101F02"]
-			hide: true
 			hide_dependency_lines: true
+			hide_until_deps_visible: true
 			icon: "gtceu:deeply_withered_nether_slag_bucket"
 			id: "2B96AA2FF13432C2"
 			tasks: [{

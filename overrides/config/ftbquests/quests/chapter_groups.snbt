@@ -9,12 +9,13 @@
 		{ id: "4B9C53F35CAB9BEE", title: "&fSoaked in Blood&r - [&dLuV&r]" }
 		{ id: "7295A11F0DD1E8D1", title: "&fLanguage of the Universe&r - [&cZPM&r]" }
 		{ id: "34809FA43B03812C", title: "&fPierce the Heavens &r- [&9UV&r]" }
-		{ id: "492B135B053E111A", title: "&fThe Perfect Revenge&r - [&4UHV&r]" }
-		{ id: "05E791D3658E47D0", title: "&fProject Frontiers&r - [&2UEV&r]" }
-		{ id: "0FA2E8AE749DD85D", title: "&fRewrite the World&r - [&eUXV&r]" }
-		{ id: "0AE0B3EFA57DABD2", title: "&6The Finality&r - [&9&lOPV&r]" }
-		{ id: "3189B6C95DDE02C3", title: "&fTo Make an Ending&r- [&f&lMAX&r]" }
-		{ id: "67BE70C11B6638CD", title: "&fThe Cry of Time &r- [&4&lERROR&r]" }
-		{ id: "74CC5D172863EBC5", title: "&fExtended Endgame&r - [&a&oCosmic Frontiers&7]" }
+		{ id: "492B135B053E111A", title: "&fImperfect Resentment&r - [&4UHV&r]" }
+		{ id: "05E791D3658E47D0", title: "&fRune Breaker&r - [&aUEV&r]" }
+		{ id: "153885258CBAE38E", title: "&fAn Eternal Question &7- &f[&2UIV&f]" }
+		{ id: "0FA2E8AE749DD85D", title: "&fRewrite the Line&r - [&eUXV&r]" }
+		{ id: "0AE0B3EFA57DABD2", title: "&cOur Final Choice&r - [&9&lOPV&r]" }
+		{ id: "3189B6C95DDE02C3", title: "&6Make an Ending&r- [&f&lMAX&r]" }
+		{ id: "67BE70C11B6638CD", title: "&bWails of Time&r- [&4&lERROR&r]" }
+		{ id: "74CC5D172863EBC5", title: "&aExtended Endgame&r - [&a&oCosmic Frontiers&7]" }
 	]
 }

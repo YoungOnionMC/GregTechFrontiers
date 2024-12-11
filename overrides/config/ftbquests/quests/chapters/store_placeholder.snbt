@@ -73,9 +73,10 @@
 			}]
 			subtitle: "&fBetter Insulation"
 			tasks: [{
+				consume_items: true
 				count: 4L
 				id: "42016E1E95A5F0BE"
-				item: { Count: 4, id: "cosmiccore:large_shard_of_perpetuity" }
+				item: "cosmiccore:large_shard_of_perpetuity"
 				type: "item"
 			}]
 			title: "Shop : Chameleon Spawn Egg"
@@ -83,6 +84,7 @@
 			y: -1.5d
 		}
 		{
+			can_repeat: true
 			description: ["This should allow you to hold off from grinding out an enchanting setup. If you so choose to."]
 			icon: {
 				Count: 1
@@ -95,6 +97,7 @@
 				}
 			}
 			id: "2CB5D5370643522C"
+			optional: true
 			rewards: [{
 				id: "061FEA9917FF5C9E"
 				item: {
@@ -370,9 +373,10 @@
 			}]
 			subtitle: "&fHoney Please!"
 			tasks: [{
+				consume_items: true
 				count: 32L
 				id: "1817049F5E9467ED"
-				item: { Count: 32, id: "cosmiccore:shard_of_perpetuity" }
+				item: "cosmiccore:shard_of_perpetuity"
 				type: "item"
 			}]
 			title: "Shop : A Box of Bees"
@@ -392,9 +396,10 @@
 			}]
 			subtitle: "&fCool Tunes"
 			tasks: [{
+				consume_items: true
 				count: 16L
 				id: "23554CA7E1D276E3"
-				item: { Count: 16, id: "cosmiccore:shard_of_perpetuity" }
+				item: "cosmiccore:shard_of_perpetuity"
 				type: "item"
 			}]
 			title: "Shop Roll : Music Disk"
@@ -414,6 +419,7 @@
 			}]
 			subtitle: "&fIf you're having trouble!"
 			tasks: [{
+				consume_items: true
 				id: "04CA22D5DA13D5D6"
 				item: "cosmiccore:large_shard_of_perpetuity"
 				type: "item"
@@ -446,9 +452,10 @@
 				}
 			]
 			tasks: [{
+				consume_items: true
 				count: 16L
 				id: "678F0A4C7C8D4ED6"
-				item: { Count: 16, id: "cosmiccore:shard_of_perpetuity" }
+				item: "cosmiccore:shard_of_perpetuity"
 				type: "item"
 			}]
 			title: "Shop Roll : Vanilla Saplings"
@@ -466,9 +473,10 @@
 			}]
 			subtitle: "&fA quick ignition"
 			tasks: [{
+				consume_items: true
 				count: 16L
 				id: "20F47DB04CA74EAA"
-				item: { Count: 16, id: "cosmiccore:shard_of_perpetuity" }
+				item: "cosmiccore:shard_of_perpetuity"
 				type: "item"
 			}]
 			title: "Shope : Fire Charge"

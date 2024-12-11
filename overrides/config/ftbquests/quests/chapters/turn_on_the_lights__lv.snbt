@@ -24,7 +24,7 @@
 				""
 				"Welcome to LV, the Main goal set out before you is to reach the aether."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "12EBF67C386AA4B6"
 			shape: "hexagon"
 			size: 2.5d
@@ -256,8 +256,8 @@
 		}
 		{
 			dependencies: ["12EBF67C386AA4B6"]
-			hide: true
 			hide_dependency_lines: true
+			hide_until_deps_visible: true
 			id: "6157CEB8F4884CE2"
 			tasks: [{
 				id: "5976267FC5B164F2"

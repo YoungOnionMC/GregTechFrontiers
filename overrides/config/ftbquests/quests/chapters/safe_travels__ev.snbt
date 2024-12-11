@@ -19,7 +19,7 @@
 				"&3&oYour lamentations are known solely to the stars, while the void beyond remains oblivious to your motivations.&r"
 				"&c&oFor now.&r"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "5837A875D09D3E35"
 			shape: "hexagon"
 			size: 2.5d
@@ -469,7 +469,7 @@
 				"62D8A986F474023F"
 				"636BBD84AF9B125B"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "44166B73DECEC3CA"
 			tasks: [{
 				id: "554AC50C216CD399"
@@ -488,7 +488,7 @@
 		{
 			dependencies: ["44166B73DECEC3CA"]
 			description: ["The higher the tier above EV, the more efficient the recipe becomes"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "217D18CBDCF23123"
 			tasks: [{
 				id: "72CC81CF85A8869C"
@@ -910,8 +910,8 @@
 				"5837A875D09D3E35"
 			]
 			description: ["Placeholder : SOURCE - LRE / MRE "]
-			hide: true
 			hide_dependency_lines: true
+			hide_until_deps_visible: true
 			icon: "gtceu:praseodymium_ingot"
 			id: "478B3130E4E9FE6B"
 			shape: "hexagon"
