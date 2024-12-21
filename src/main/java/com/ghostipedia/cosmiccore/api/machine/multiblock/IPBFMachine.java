@@ -11,8 +11,11 @@ import com.gregtechceu.gtceu.api.machine.feature.multiblock.IDisplayUIMachine;
 import com.gregtechceu.gtceu.api.machine.multiblock.WorkableMultiblockMachine;
 import com.gregtechceu.gtceu.api.machine.steam.SteamEnergyRecipeHandler;
 import com.gregtechceu.gtceu.api.recipe.GTRecipe;
-import com.gregtechceu.gtceu.api.recipe.logic.OCParams;
-import com.gregtechceu.gtceu.api.recipe.logic.OCResult;
+import com.gregtechceu.gtceu.api.recipe.OverclockingLogic;
+import com.gregtechceu.gtceu.api.recipe.RecipeHelper;
+import com.gregtechceu.gtceu.api.recipe.content.ContentModifier;
+import com.gregtechceu.gtceu.api.recipe.modifier.ModifierFunction;
+import com.gregtechceu.gtceu.api.recipe.modifier.ParallelLogic;
 import com.gregtechceu.gtceu.common.data.GTRecipeModifiers;
 import com.gregtechceu.gtceu.config.ConfigHolder;
 import com.lowdragmc.lowdraglib.gui.modular.ModularUI;
@@ -33,6 +36,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -104,13 +108,17 @@ public class IPBFMachine extends WorkableMultiblockMachine implements IDisplayUI
             getLevel().addParticle(ParticleTypes.LARGE_SMOKE, xPos, yPos, zPos, 0, ySpd, 0);
         }
     }
-    public static GTRecipe recipeModifier(MetaMachine machine, @NotNull GTRecipe recipe, @NotNull OCParams params,
-                                          @NotNull OCResult result) {
-        int duration = recipe.duration;
-        var parallelRecipe = GTRecipeModifiers.accurateParallel(machine, recipe, MAX_PARALLELS, false);
-        result.init(0,(int) (duration * 1.5), parallelRecipe.getSecond(),
-                params.getOcAmount());
-        return recipe;
+    @Nullable
+    public static ModifierFunction recipeModifier(@NotNull MetaMachine machine, @NotNull GTRecipe recipe) {
+        if (RecipeHelper.getRecipeEUtTier(recipe) > GTValues.LV) return ModifierFunction.NULL;
+        long euTick = RecipeHelper.getRecipeEUtTier(recipe);
+        int parallel = ParallelLogic.getParallelAmount(machine,recipe, 8);
+        return ModifierFunction.builder()
+                .inputModifier(ContentModifier.multiplier(parallel))
+                .outputModifier(ContentModifier.multiplier(parallel))
+                .durationMultiplier(parallel*0.75)
+                .parallels(parallel)
+                .build();
     }
     @Override
     public IGuiTexture getScreenTexture() {

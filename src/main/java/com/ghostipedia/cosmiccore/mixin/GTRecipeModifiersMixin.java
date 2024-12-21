@@ -5,8 +5,6 @@ import com.ghostipedia.cosmiccore.api.capability.IHeatBlock;
 import com.gregtechceu.gtceu.api.machine.MetaMachine;
 import com.gregtechceu.gtceu.api.machine.multiblock.CoilWorkableElectricMultiblockMachine;
 import com.gregtechceu.gtceu.api.recipe.GTRecipe;
-import com.gregtechceu.gtceu.api.recipe.logic.OCParams;
-import com.gregtechceu.gtceu.api.recipe.logic.OCResult;
 import com.gregtechceu.gtceu.common.data.GTRecipeModifiers;
 import dev.architectury.patchedmixin.staticmixin.spongepowered.asm.mixin.injection.At;
 import dev.architectury.patchedmixin.staticmixin.spongepowered.asm.mixin.injection.ModifyVariable;
@@ -23,8 +21,7 @@ public abstract class GTRecipeModifiersMixin {
     // god this is evil. I love it.
     @SuppressWarnings({"MixinAnnotationTarget", "InvalidInjectorMethodSignature"}) // it works anyway, MCDev just doesn't know that
     @ModifyVariable(method = "ebfOverclock", at = @At(value = "STORE"), ordinal = 0) // target = "Lcom/gregtechceu/gtceu/api/block/ICoilType;getCoilTemperature()I",
-    private static int frontiers$modifyEbfHeatValue(int originalCoilTemp, MetaMachine machine, @NotNull GTRecipe recipe, @NotNull OCParams params,
-                                                    @NotNull OCResult result) {
+    private static int frontiers$modifyEbfHeatValue(int originalCoilTemp, MetaMachine machine, @NotNull GTRecipe recipe                                                    ) {
         int coilTier = 1;
         if (machine instanceof CoilWorkableElectricMultiblockMachine coilMachine) {
             System.out.println("COILBLOCKHIT");

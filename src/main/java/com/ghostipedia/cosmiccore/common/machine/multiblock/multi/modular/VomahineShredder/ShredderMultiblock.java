@@ -110,7 +110,6 @@ public class ShredderMultiblock {
                         })
                         .workableCasingRenderer(CosmicCore.id("block/casings/solid/vomahine_certified_chemically_resistant_casing"), GTCEu.id("block/multiblock/fusion_reactor"))
                         .hasTESR(true)
-                        .compassNodeSelf()
                         .register(),
                     ZPM, UV,UHV);
 

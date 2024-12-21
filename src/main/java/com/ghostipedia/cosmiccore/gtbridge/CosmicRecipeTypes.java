@@ -128,15 +128,12 @@ public class CosmicRecipeTypes {
     public static void init() {
         CHEMICAL_RECIPES.onRecipeBuild((builder, provider) -> {
             LARGE_CHEMICAL_RECIPES.copyFrom(builder)
-                    .category(GTRecipeCategory.of(LARGE_CHEMICAL_RECIPES))
                     .save(provider);
             VOMAHINE_INDUSTRIAL_CHEMVAT.copyFrom(builder)
-                    .category(GTRecipeCategory.of(VOMAHINE_INDUSTRIAL_CHEMVAT))
                     .save(provider);
         });
         LARGE_CHEMICAL_RECIPES.onRecipeBuild((builder, provider) -> {
             VOMAHINE_INDUSTRIAL_CHEMVAT.copyFrom(builder)
-                    .category(GTRecipeCategory.of(VOMAHINE_INDUSTRIAL_CHEMVAT))
                     .save(provider);
         });
 
