@@ -27,17 +27,10 @@ public class FireResApplicator {
     public static void onPotionEffect(MobEffectEvent.Expired event) {
         if (event.getEntity() instanceof Player player) {
             if (event.getEffectInstance() != null && event.getEffectInstance().getEffect() == MobEffects.FIRE_RESISTANCE) {
-                TemperatureUtil.internal.addHeatResistanceModifier(player, -500.0, heatResModifierID);
+                TemperatureUtil.internal.addHeatResistanceModifier(player, 0.0, heatResModifierID);
             }
         }
     }
-    @SubscribeEvent
-    public static void onPotionEffect(MobEffectEvent event) {
-        if (event.getEntity() instanceof Player player) {
-            if (event.getEffectInstance() != null && event.getEffectInstance().getEffect() == MobEffects.FIRE_RESISTANCE) {
-                TemperatureUtil.internal.addHeatResistanceModifier(player, -50.0, heatResModifierID);
-            }
-        }
-    }
+
 
 }
