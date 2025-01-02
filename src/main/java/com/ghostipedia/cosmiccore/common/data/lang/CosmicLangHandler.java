@@ -100,6 +100,8 @@ public class CosmicLangHandler {
         replace(provider,"block.gtceu.lp_steam_wiremill", "I Don't Actually Exist");
         //Rune Lang
         replace(provider,"cosmiccore.rune_vague", "§7§oLatent emotions seem to be missing.");
+        replace(provider,"cosmiccore.rune_emotion_weak.1", "§7§oAn incomplete ERA reaction is observed.");
+        replace(provider,"cosmiccore.rune_emotion_weak.2", "§7§Strong emotional and chemical reactions cause the slate to vibrate.");
         replace(provider,"cosmiccore.arklys.1", "§6Ark - Structure");
         replace(provider,"cosmiccore.arklys.2", "§6Lys - Release");
 
@@ -111,6 +113,24 @@ public class CosmicLangHandler {
 
         replace(provider,"cosmiccore.zelothar.1", "§6Zelos - Zeal");
         replace(provider,"cosmiccore.zelothar.2", "§6Thar - Forge");
+
+        replace(provider,"cosmiccore.tenura.1", "§6Ten - Control");
+        replace(provider,"cosmiccore.tenura.2", "§6Ura - Flow");
+
+        replace(provider,"cosmiccore.valdris.1", "§6Val - Overwhelm");
+        replace(provider,"cosmiccore.valdris.2", "§6Dris - Connect");
+
+        replace(provider,"cosmiccore.conjuct_kholys.1", "§6Khor - Space");
+        replace(provider,"cosmiccore.conjuct_kholys.2", "§6Lys - Release");
+        replace(provider,"cosmiccore.conjuct_kholys_emotion.1", "§bE.R.A - Confidence");
+
+        replace(provider,"cosmiccore.conjuct_arklythar.1", "§6Ark - Structure");
+        replace(provider,"cosmiccore.conjuct_arklythar.2", "§6Thar - Forge");
+        replace(provider,"cosmiccore.conjuct_arklythar_emotion.1", "§bE.R.A -  Resolve");
+
+        replace(provider,"cosmiccore.conjuct_valkruth.1", "§6Val - Overwhelming");
+        replace(provider,"cosmiccore.conjuct_valkruth.2", "§6Ruth - Foundation");
+        replace(provider,"cosmiccore.conjuct_valkruth_emotion.1", "§bE.R.A -  Convergence");
 
 
         replace(provider,"item.cosmiccore.the_one_ring.tooltip.0", "§6§oOne Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.§r");

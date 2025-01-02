@@ -633,6 +633,64 @@ public class CosmicItems {
             })))
             .defaultModel()
             .register();
+    public static final ItemEntry<ComponentItem> RUNE_SLATE_TENURA = REGISTRATE.item("rune_slate_tenura", ComponentItem::create)
+            .lang("Rune Slate [Tenura]")
+            .properties(p -> p.stacksTo(64))
+            .onRegister(attach(new TooltipBehavior(tooltips -> {
+                tooltips.add(Component.translatable("cosmiccore.tenura.1"));
+                tooltips.add(Component.translatable("cosmiccore.tenura.2"));
+                tooltips.add(Component.translatable("cosmiccore.rune_vague"));
+            })))
+            .defaultModel()
+            .register();
+
+    public static final ItemEntry<ComponentItem> RUNE_SLATE_VALDRIS = REGISTRATE.item("rune_slate_valdris", ComponentItem::create)
+            .lang("Rune Slate [Tenura]")
+            .properties(p -> p.stacksTo(64))
+            .onRegister(attach(new TooltipBehavior(tooltips -> {
+                tooltips.add(Component.translatable("cosmiccore.valdris.1"));
+                tooltips.add(Component.translatable("cosmiccore.valdris.2"));
+                tooltips.add(Component.translatable("cosmiccore.rune_vague"));
+            })))
+            .defaultModel()
+            .register();
+
+    public static final ItemEntry<ComponentItem> RUNE_CONJUNCTION_VALKRUTH = REGISTRATE.item("rune_conjunction_valkruth", ComponentItem::create)
+            .lang("Rune Conjunction [Valkruth]")
+            .properties(p -> p.stacksTo(64))
+            .onRegister(attach(new TooltipBehavior(tooltips -> {
+                tooltips.add(Component.translatable("cosmiccore.conjuct_valkruth.1"));
+                tooltips.add(Component.translatable("cosmiccore.conjuct_valkruth.2"));
+                tooltips.add(Component.translatable("cosmiccore.conjuct_valkruth_emotion.1"));
+                tooltips.add(Component.translatable("cosmiccore.rune_emotion_weak.1"));
+            })))
+            .defaultModel()
+            .register();
+
+    public static final ItemEntry<ComponentItem> RUNE_CONJUNCTION_KHOLYS = REGISTRATE.item("rune_conjunction_kholys", ComponentItem::create)
+            .lang("Rune Conjunction [Kholys]")
+            .properties(p -> p.stacksTo(64))
+            .onRegister(attach(new TooltipBehavior(tooltips -> {
+                tooltips.add(Component.translatable("cosmiccore.conjuct_kholys.1"));
+                tooltips.add(Component.translatable("cosmiccore.conjuct_kholys.2"));
+                tooltips.add(Component.translatable("cosmiccore.conjuct_kholys_emotion.1"));
+                tooltips.add(Component.translatable("cosmiccore.rune_emotion_weak.1"));
+            })))
+            .defaultModel()
+            .register();
+
+    public static final ItemEntry<ComponentItem> RUNE_CONJUNCTION_ARKLYTHAR = REGISTRATE.item("rune_conjunction_arklythar", ComponentItem::create)
+            .lang("Rune Conjunction [Arklythar]")
+            .properties(p -> p.stacksTo(64))
+            .onRegister(attach(new TooltipBehavior(tooltips -> {
+                tooltips.add(Component.translatable("cosmiccore.conjuct_arklythar.1"));
+                tooltips.add(Component.translatable("cosmiccore.conjuct_arklythar.2"));
+                tooltips.add(Component.translatable("cosmiccore.conjuct_arklythar_emotion.1"));
+                tooltips.add(Component.translatable("cosmiccore.rune_emotion_weak.1"));
+                tooltips.add(Component.translatable("cosmiccore.rune_emotion_weak.2"));
+            })))
+            .defaultModel()
+            .register();
     //Thermal Related Things for LSO
 
 

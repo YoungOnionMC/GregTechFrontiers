@@ -32,5 +32,13 @@ public class FireResApplicator {
         }
     }
 
+    @SubscribeEvent
+    public static void onPotionEffect(MobEffectEvent.Remove event) {
+        if (event.getEntity() instanceof Player player) {
+            if (event.getEffectInstance() != null && event.getEffectInstance().getEffect() == MobEffects.FIRE_RESISTANCE) {
+                TemperatureUtil.internal.addHeatResistanceModifier(player, 0.0, heatResModifierID);
+            }
+        }
+    }
 
 }
