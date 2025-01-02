@@ -101,7 +101,7 @@ public class CosmicLangHandler {
         //Rune Lang
         replace(provider,"cosmiccore.rune_vague", "§7§oLatent emotions seem to be missing.");
         replace(provider,"cosmiccore.rune_emotion_weak.1", "§7§oAn incomplete ERA reaction is observed.");
-        replace(provider,"cosmiccore.rune_emotion_weak.2", "§7§Strong emotional and chemical reactions cause the slate to vibrate.");
+        replace(provider,"cosmiccore.rune_emotion_weak.2", "§7§oStrong emotional and chemical reactions cause the slate to vibrate.");
         replace(provider,"cosmiccore.arklys.1", "§6Ark - Structure");
         replace(provider,"cosmiccore.arklys.2", "§6Lys - Release");
 

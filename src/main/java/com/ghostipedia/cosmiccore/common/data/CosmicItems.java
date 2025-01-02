@@ -663,6 +663,7 @@ public class CosmicItems {
                 tooltips.add(Component.translatable("cosmiccore.conjuct_valkruth.2"));
                 tooltips.add(Component.translatable("cosmiccore.conjuct_valkruth_emotion.1"));
                 tooltips.add(Component.translatable("cosmiccore.rune_emotion_weak.1"));
+                tooltips.add(Component.translatable("cosmiccore.rune_emotion_weak.2"));
             })))
             .defaultModel()
             .register();
@@ -675,6 +676,7 @@ public class CosmicItems {
                 tooltips.add(Component.translatable("cosmiccore.conjuct_kholys.2"));
                 tooltips.add(Component.translatable("cosmiccore.conjuct_kholys_emotion.1"));
                 tooltips.add(Component.translatable("cosmiccore.rune_emotion_weak.1"));
+                tooltips.add(Component.translatable("cosmiccore.rune_emotion_weak.2"));
             })))
             .defaultModel()
             .register();
