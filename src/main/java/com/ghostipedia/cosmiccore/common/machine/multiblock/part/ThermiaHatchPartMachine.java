@@ -1,5 +1,6 @@
 package com.ghostipedia.cosmiccore.common.machine.multiblock.part;
 
+import com.ghostipedia.cosmiccore.api.capability.recipe.IHeatContainer;
 import com.ghostipedia.cosmiccore.api.machine.trait.NotifiableThermiaContainer;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.capability.recipe.IO;
@@ -15,9 +16,10 @@ import com.lowdragmc.lowdraglib.syncdata.annotation.DescSynced;
 import com.lowdragmc.lowdraglib.syncdata.annotation.Persisted;
 import com.lowdragmc.lowdraglib.syncdata.field.ManagedFieldHolder;
 import net.minecraft.client.resources.language.I18n;
+import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 
-public class ThermiaHatchPartMachine extends TieredIOPartMachine {
+public class ThermiaHatchPartMachine extends TieredIOPartMachine implements IHeatContainer {
 
     protected static final ManagedFieldHolder MANAGED_FIELD_HOLDER = new ManagedFieldHolder(ThermiaHatchPartMachine.class, TieredIOPartMachine.MANAGED_FIELD_HOLDER);
 
@@ -26,8 +28,23 @@ public class ThermiaHatchPartMachine extends TieredIOPartMachine {
     public ThermiaHatchPartMachine(IMachineBlockEntity holder, int tier, IO io) {
         super(holder, tier, io);
         long currentTemp = 0;
-        this.thermiaContainer = new NotifiableThermiaContainer(this, io, getThermiaLimits(tier), currentTemp);
+        this.thermiaContainer = createThermiaContainer();
     }
+    protected NotifiableThermiaContainer createThermiaContainer(){
+        NotifiableThermiaContainer container;
+        if (io == IO.OUT){
+            container = new NotifiableThermiaContainer(this, IO.OUT,getThermiaLimits(tier),0);
+            container.setSideOutputCondition(s -> s == getFrontFacing());
+            container.setCapabilityValidator(s -> s == null || s == getFrontFacing());
+        } else {
+            container = new NotifiableThermiaContainer(this, IO.IN,getThermiaLimits(tier),0);
+            container.setSideInputCondition(s -> s == getFrontFacing());
+            container.setCapabilityValidator(s -> s == null || s == getFrontFacing());
+        }
+        return container;
+    }
+
+
     @Override
     public Widget createUIWidget() {
         var group = new WidgetGroup(0,0,128,63);
@@ -54,4 +71,35 @@ public class ThermiaHatchPartMachine extends TieredIOPartMachine {
             default -> 0;
         };
     }
+
+    @Override
+    public long acceptHeatFromNetwork(Direction side) {
+        return 0;
+    }
+
+    @Override
+    public boolean inputsHeat(Direction side) {
+        return false;
+    }
+
+    @Override
+    public boolean outputsHeat(Direction side) {
+        return IHeatContainer.super.outputsHeat(side);
+    }
+
+    @Override
+    public long changeHeat(long heatDifference) {
+        return 0;
+    }
+
+    @Override
+    public long getOverloadLimit() {
+        return 0;
+    }
+
+    @Override
+    public long getHeatStorage() {
+        return 0;
+    }
+
 }

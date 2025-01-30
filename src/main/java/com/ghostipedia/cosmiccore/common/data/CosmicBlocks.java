@@ -6,6 +6,7 @@ import com.ghostipedia.cosmiccore.api.block.IMagnetType;
 import com.ghostipedia.cosmiccore.client.renderer.block.NebulaeCoilRenderer;
 import com.ghostipedia.cosmiccore.common.block.MagnetBlock;
 import com.ghostipedia.cosmiccore.common.data.recipe.RecipeTags;
+import com.ghostipedia.cosmiccore.common.item.RenderBlockItem;
 import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.block.ActiveBlock;
@@ -135,7 +136,7 @@ public class CosmicBlocks {
                 .addLayer(() -> RenderType::translucent)
                 .blockstate(NonNullBiConsumer.noop())
                 .tag(RecipeTags.MINEABLE_WITH_WRENCH, BlockTags.MINEABLE_WITH_PICKAXE)
-                .item(BlockItem::new)
+                .item(RenderBlockItem::new)
                 .model(NonNullBiConsumer.noop())
                 .build()
                 .register();

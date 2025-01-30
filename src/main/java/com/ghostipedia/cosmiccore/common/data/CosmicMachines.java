@@ -7,6 +7,7 @@ import com.ghostipedia.cosmiccore.api.machine.part.SteamFluidHatchPartMachine;
 import com.ghostipedia.cosmiccore.api.registries.CosmicRegistration;
 import com.ghostipedia.cosmiccore.client.renderer.machine.SidedWorkableHullRenderer;
 import com.ghostipedia.cosmiccore.common.block.WorkableSteamHullType;
+import com.ghostipedia.cosmiccore.common.block.debug.CreativeThermiaContainerMachine;
 import com.ghostipedia.cosmiccore.common.data.materials.CosmicMaterials;
 import com.ghostipedia.cosmiccore.common.data.recipe.CosmicRecipeModifiers;
 import com.ghostipedia.cosmiccore.common.machine.multiblock.electric.MagneticFieldMachine;
@@ -43,6 +44,7 @@ import com.gregtechceu.gtceu.client.renderer.machine.WorkableSteamMachineRendere
 import com.gregtechceu.gtceu.common.block.BoilerFireboxType;
 import com.gregtechceu.gtceu.common.data.*;
 import com.gregtechceu.gtceu.common.machine.multiblock.electric.FusionReactorMachine;
+import com.gregtechceu.gtceu.common.machine.storage.CreativeEnergyContainerMachine;
 import com.gregtechceu.gtceu.common.registry.GTRegistration;
 import it.unimi.dsi.fastutil.Pair;
 import net.minecraft.network.chat.Component;
@@ -624,7 +626,11 @@ public static final MultiblockMachineDefinition STEAM_MIXER = GTRegistration.REG
                                 tooltip.add(Component.translatable("tooltip.cosmiccore.thermia_hatch_limit", ThermiaHatchPartMachine.getThermiaLimits(tier)));
                         }).register(), tiers);
     }
-
+    public static final MachineDefinition CREATIVE_HEAT = REGISTRATE
+            .machine("creative_thermal", CreativeThermiaContainerMachine::new)
+            .rotationState(RotationState.NONE)
+            .tooltipBuilder(CREATIVE_TOOLTIPS)
+            .register();
     private static MachineDefinition[] registerTieredMachines(String name, BiFunction<IMachineBlockEntity, Integer, MetaMachine> factory, BiFunction<Integer, MachineBuilder<MachineDefinition>, MachineDefinition> builder, int... tiers) {
         MachineDefinition[] definitions = new MachineDefinition[GTValues.TIER_COUNT];
         for (int tier : tiers) {
