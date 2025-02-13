@@ -645,7 +645,7 @@ public class CosmicItems {
             .register();
 
     public static final ItemEntry<ComponentItem> RUNE_SLATE_VALDRIS = REGISTRATE.item("rune_slate_valdris", ComponentItem::create)
-            .lang("Rune Slate [Tenura]")
+            .lang("Rune Slate [Valdris]")
             .properties(p -> p.stacksTo(64))
             .onRegister(attach(new TooltipBehavior(tooltips -> {
                 tooltips.add(Component.translatable("cosmiccore.valdris.1"));
