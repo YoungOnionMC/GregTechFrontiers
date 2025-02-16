@@ -5,13 +5,14 @@
   "general": {
     "allowFlowingWater": true,
     "allowFlowingLava": true,
-    "storagePerPixel": 1.0,
+    "storagePerPixel": 0.0,
     "enableBed": true,
     "enableAnimationCollision": true,
     "enableCollisionMotion": true,
     "dyeVolume": 2.0,
     "maxAllowedDensity": 2048,
-    "maxDoorDistance": 512
+    "maxDoorDistance": 512,
+    "messageStructureLength": 4098
   },
   "build": {
     "default": {

@@ -23,6 +23,7 @@
 				""
 				"blah blah, Ghostipedia is full of soup."
 			]
+			hide_until_deps_complete: true
 			hide_until_deps_visible: true
 			id: "1E72D62913EEB4EE"
 			shape: "hexagon"
@@ -1755,7 +1756,6 @@
 				{
 					id: "6FF1813D9F3899E6"
 					item: "gtceu:uranium_hexafluoride_bucket"
-					optional_task: true
 					type: "item"
 				}
 				{

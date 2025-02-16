@@ -25,6 +25,8 @@ yeet('occultism:copper_dust')
 yeet('occultism:silver_dust')
 yeet('occultism:obsidian_dust')
 yeet('occultism:crushed_end_stone')
+yeet('occultism:storage_stabilizer_tier3')
+yeet('occultism:storage_stabilizer_tier4')
 
 yeet('occultism:storage_remote_inert')
 yeet('occultism:storage_remote')
@@ -82,15 +84,6 @@ ServerEvents.recipes(event => {
     C: 'gtceu:double_silver_plate'
   })
   event.remove({ id: 'occultism:crafting/storage_controller' })
-  event.shaped('occultism:storage_controller', [
-    ' A ',
-    ' B ',
-    ' C ',
-  ], {
-    A: 'occultism:dimensional_matrix',
-    B: 'toms_storage:ts.crafting_terminal',
-    C: 'occultism:storage_controller_base'
-  })
   //Iesnium Pickaxe
   event.remove({ id: 'occultism:crafting/iesnium_pickaxe' })
   event.shaped('occultism:iesnium_pickaxe', [
@@ -162,7 +155,7 @@ ServerEvents.recipes(event => {
   //   .duration(800)
   //IPBF VERSIONS
   event.recipes.gtceu.industrial_primitive_blast_furnace('chalk_purify_ipbf')
-    .itemInputs('occultism:chalk_white_impure')
+    .itemInputs(['occultism:chalk_white_impure','4x gtceu:calcite_dust'])
     .inputFluids('gtceu:creosote 1000')
     .itemOutputs('occultism:chalk_white')
     .duration(3000)
@@ -200,6 +193,18 @@ ServerEvents.recipes(event => {
   event.recipes.occultism.miner(
     Item.of('gtceu:raw_iesnium').withChance(75),
     'occultism:iesnium_pickaxe'
+  )
+  event.recipes.occultism.miner(
+    Item.of('cosmiccore:rune_slate_tenura').withChance(75),
+    'malum:soul_stained_steel_pickaxe'
+  )
+  event.recipes.occultism.miner(
+    Item.of('cosmiccore:rune_slate_valdris').withChance(75),
+    'malum:soul_stained_steel_pickaxe'
+  )
+  event.recipes.occultism.miner(
+    Item.of('malum:cluster_of_brilliance').withChance(75),
+    'malum:soul_stained_steel_pickaxe'
   )
   event.recipes.occultism.ritual(
     '16x gtceu:runed_steel_ingot',
@@ -244,19 +249,6 @@ ServerEvents.recipes(event => {
     "gtceu:gold_dust",
     'occultism:basic_fusion'
   ).dummy("kubejs:dummy_ritual_thing").id("occultism:frontiers.fusion_ritual.gold_glob")
-  event.recipes.occultism.ritual(
-    'toms_storage:ts.crafting_terminal',
-    ['ulvcovm:ulv_robot_arm',
-      'ulvcovm:ulv_robot_arm',
-      'ulvcovm:ulv_robot_arm',
-      'minecraft:crafting_table',
-      'minecraft:crafting_table',
-      'minecraft:crafting_table',
-      'minecraft:crafting_table',
-      'gtceu:steam_machine_casing'],
-    'toms_storage:ts.storage_terminal',
-    'occultism:craft_djinni'
-  ).dummy("kubejs:dummy_ritual_thing").id("occultism:frontiers.fusion_ritual.terminal_crafting")
   event.remove({ id: 'occultism:ritual/craft_storage_controller_base' })
   event.recipes.occultism.ritual(
     'occultism:storage_controller_base',

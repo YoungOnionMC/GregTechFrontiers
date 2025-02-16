@@ -295,18 +295,18 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VA[GTValues.MV] / 2)
     //Soul Sprout
     event.recipes.gtceu.flora_nurturer('soul_cultivation')
-        .notConsumable('cold_sweat:soul_sprout')
-        .notConsumable('minecraft:soul_sand')
+        .notConsumable('legendarysurvivaloverhaul:ice_fern_leaf')
+        .notConsumable('minecraft:moss_block')
         .inputFluids(Fluid.of('gtceu:nether_sediment_sludge', 500))
-        .itemOutputs('cold_sweat:soul_sprout')
-        .chancedOutput(Item.of('cold_sweat:soul_sprout', 1), 2500, 500)
+        .itemOutputs('legendarysurvivaloverhaul:ice_fern_leaf')
+        .chancedOutput(Item.of('legendarysurvivaloverhaul:ice_fern_leaf', 1), 2500, 500)
         .duration(160)
         .EUt(GTValues.VA[GTValues.LV] / 2);
     event.recipes.gtceu.flora_nurturer('soul_cultivation_nutrient_sol')
-        .notConsumable('cold_sweat:soul_sprout')
-        .notConsumable('minecraft:soul_sand')
+        .notConsumable('legendarysurvivaloverhaul:ice_fern_leaf')
+        .notConsumable('minecraft:moss_block')
         .inputFluids('gtceu:nutrient_solution 50')
-        .itemOutputs('16x cold_sweat:soul_sprout')
+        .itemOutputs('16x legendarysurvivaloverhaul:ice_fern_leaf')
         .duration(160)
         .EUt(GTValues.VA[GTValues.MV] / 2);
     let floraNether = [
@@ -379,7 +379,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.flora_nurturer('amber_aether')
         .notConsumable('1x aether:golden_oak_sapling')
-        .notConsumable('1x deep_aether:golden_heights_grass_block')
+        .notConsumable('aether:aether_dirt')
         .inputFluids('gtceu:aether_augmented_sediment 200')
         .itemOutputs('1x aether:golden_amber')
         .duration(120)
