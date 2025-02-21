@@ -11,6 +11,7 @@ import static com.gregtechceu.gtceu.data.lang.LangHandler.replace;
 public class CosmicLangHandler {
 
     public static void init(RegistrateLangProvider provider) {
+        replace(provider,"cosmiccore.gravpack.1","§aNormalizes Gravity to Match Earth.");
         replace(provider,"cosmiccore.recipe.soulIn","Soul Input: %s");
         replace(provider,"cosmiccore.recipe.soulOut", "Soul Output: %s");
         replace(provider,"cosmiccore.wire_coil.magnet_capacity", "  §fMax Field Strength: §f%s Tesla");

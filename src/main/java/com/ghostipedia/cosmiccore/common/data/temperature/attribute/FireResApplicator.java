@@ -1,6 +1,7 @@
 package com.ghostipedia.cosmiccore.common.data.temperature.attribute;
 
 import com.ghostipedia.cosmiccore.CosmicCore;
+import earth.terrarium.adastra.api.events.AdAstraEvents;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.entity.living.MobEffectEvent;
@@ -20,6 +21,9 @@ public class FireResApplicator {
     public static void onPotionEffect(MobEffectEvent.Added event) {
         if (event.getEntity() instanceof Player player && event.getEffectInstance().getEffect() == MobEffects.FIRE_RESISTANCE) {
             TemperatureUtil.internal.addHeatResistanceModifier(player, 500.0, heatResModifierID);
+        }
+        if (event.getEntity() instanceof Player player && event.getEffectInstance().getEffect() == MobEffects.WATER_BREATHING) {
+
         }
     }
 

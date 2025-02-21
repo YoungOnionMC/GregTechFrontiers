@@ -693,7 +693,16 @@ public class CosmicItems {
             })))
             .defaultModel()
             .register();
-    //Thermal Related Things for LSO
+    //Gravity Normalizer Item Variation
+    public static final ItemEntry<ComponentItem> PORTABLE_GRAVITY_CORE = REGISTRATE.item("portable_gravity_core", ComponentItem::create)
+            .lang("§6Portable Gravity Core")
+            .tag()
+            .properties(p -> p.stacksTo(64))
+            .onRegister(attach(new TooltipBehavior(tooltips -> {
+                tooltips.add(Component.translatable("cosmiccore.gravpack.1"));
+            })))
+            .defaultModel()
+            .register();
 
 
 
