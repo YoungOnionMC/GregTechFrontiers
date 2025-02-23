@@ -1,3 +1,8 @@
+ServerEvents.tags('block', event => {
+  event.add('cosmicfrontiers:menril_ultimine_group', 'integrateddynamics:menril_log_filled')
+  event.add('cosmicfrontiers:menril_ultimine_group', 'integrateddynamics:menril_log')
+})
+
 ServerEvents.recipes(event => {
   //Waxed Leather
   event.shaped('cosmiccore:waxed_leather', [
@@ -98,13 +103,13 @@ ServerEvents.recipes(event => {
   mech_squeeze('nethersdelight:propelpearl', 'gtceu:cinderwax', 144)
 
 
-  event.recipes.gtceu.assembler('cinder_wax_extractor')
+  event.recipes.gtceu.extractor('cinder_wax_extractor')
     .itemInputs('nethersdelight:propelpearl')
     .outputFluids('gtceu:cinderwax', 144)
     .duration(50)
     .EUt(4);
 
-  event.recipes.gtceu.assembler('soul_resin_extractor')
+  event.recipes.gtceu.extractor('soul_resin_extractor')
     .itemInputs('legendarysurvivaloverhaul:ice_fern_leaf')
     .outputFluids('gtceu:soulresin', 144)
     .duration(50)
