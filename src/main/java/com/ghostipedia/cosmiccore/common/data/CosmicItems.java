@@ -81,6 +81,20 @@ public class CosmicItems {
             .tag()
             .defaultModel()
             .register();
+    public static final ItemEntry<ComponentItem> CRYSTAL_CHIPLET_MASK = REGISTRATE
+            .item("crystal_chiplet_mask", ComponentItem::create)
+            .lang("Crystal Chiplet Mask")
+            .properties(p -> p.stacksTo(64))
+            .tag()
+            .defaultModel()
+            .register();
+    public static final ItemEntry<ComponentItem> MASKED_CRYSTAL_CHIPLET_PACKAGE = REGISTRATE
+            .item("masked_crystal_chiplet_package", ComponentItem::create)
+            .lang("Masked Crystal Chiplet Package")
+            .properties(p -> p.stacksTo(64))
+            .tag()
+            .defaultModel()
+            .register();
     public static final ItemEntry<ComponentItem> CRYSTAL_CHIPLET_BASE = REGISTRATE
             .item("crystal_chiplet_base", ComponentItem::create)
             .lang("Crystal Chiplet Base")
