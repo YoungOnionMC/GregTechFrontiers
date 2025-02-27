@@ -6,6 +6,7 @@ import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty;
+import com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey;
 import com.gregtechceu.gtceu.api.fluids.FluidBuilder;
 import com.gregtechceu.gtceu.api.fluids.FluidState;
 
@@ -264,5 +265,29 @@ public class CosmicMaterials {
                 .liquid(new FluidBuilder().temperature(10))
                 .color(0xdb5e5e).secondaryColor(0x5e0f3d).iconSet(MaterialIconSet.SHINY)
                 .buildAndRegister();
+    }
+
+    public static void modifyMaterials() {
+        var rubyOreProp = Ruby.getProperty(PropertyKey.ORE);
+        var ilmeniteOreProp = Ilmenite.getProperty(PropertyKey.ORE);
+        var aluminiumOreProp = Aluminium.getProperty(PropertyKey.ORE);
+        var bauxiteOreProp = Bauxite.getProperty(PropertyKey.ORE);
+        var nickelOreProp = Nickel.getProperty(PropertyKey.ORE);
+        var chromiteOreProp = Chromite.getProperty(PropertyKey.ORE);
+
+        rubyOreProp.getOreByProducts().clear();
+        ilmeniteOreProp.getOreByProducts().clear();
+        bauxiteOreProp.getOreByProducts().clear();
+        aluminiumOreProp.getOreByProducts().clear();
+        nickelOreProp.getOreByProducts().clear();
+        chromiteOreProp.getOreByProducts().clear();
+
+        rubyOreProp.setOreByProducts(Cinnabar, GarnetRed, GarnetRed);
+        ilmeniteOreProp.setOreByProducts(Iron, Ilmenite, Ilmenite);
+        aluminiumOreProp.setOreByProducts(Bauxite, Bauxite, Ilmenite, Ilmenite);
+        bauxiteOreProp.setOreByProducts(Grossular, Gallium, Gallium);
+        nickelOreProp.setOreByProducts(Cobalt, Iron, Cooperite);
+        nickelOreProp.setWashedIn(Mercury);
+        chromiteOreProp.setOreByProducts(Iron, Magnesium, Chromite);
     }
 }
