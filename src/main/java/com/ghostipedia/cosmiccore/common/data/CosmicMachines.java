@@ -10,6 +10,7 @@ import com.ghostipedia.cosmiccore.common.block.WorkableSteamHullType;
 import com.ghostipedia.cosmiccore.common.block.debug.CreativeThermiaContainerMachine;
 import com.ghostipedia.cosmiccore.common.data.materials.CosmicMaterials;
 import com.ghostipedia.cosmiccore.common.data.recipe.CosmicRecipeModifiers;
+import com.ghostipedia.cosmiccore.common.machine.WirelessChargerMachine;
 import com.ghostipedia.cosmiccore.common.machine.multiblock.electric.MagneticFieldMachine;
 import com.ghostipedia.cosmiccore.common.machine.multiblock.multi.WirelessDataBankMachine;
 import com.ghostipedia.cosmiccore.common.machine.multiblock.part.CosmicParallelHatchPartMachine;
@@ -126,6 +127,18 @@ public class CosmicMachines {
                     .tooltips(Component.translatable("gtceu.machine.parallel_hatch_mk" + tier + ".tooltip"))
                     .register(),
             ZPM, UV, UHV, UEV, UIV);
+
+    public static final MachineDefinition[] WIRELESS_CHARGER = registerTieredMachines("wireless_charger",
+            WirelessChargerMachine::new,
+            (tier, builder) -> builder
+                    .tooltipBuilder((stack, list) -> {
+                        list.add(Component.translatable("cosmiccore.wireless_charger.range.single", Math.pow(2, (tier + 7))));
+                        list.add(Component.translatable("cosmiccore.wireless_charger.range.mixed", Math.pow(2, (tier + 6))));
+                    })
+                    .register(),
+            GTValues.tiersBetween(EV, UIV));
+
+
 
     // Enable If needed Inside of Dev
     // public static final MultiblockMachineDefinition SOUL_TESTER = REGISTRATE.multiblock("soul_tester",
